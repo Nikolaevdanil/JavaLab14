@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta xmlns:th="http://www.thymeleaf.org">
+    <title>Home</title>
+</head>
+<body>
+<div>
+    <form method="post" action="/home/addManufacture">
+        <label>
+            <input type="text" name="name" placeholder="Название производства...">
+        </label>
+        <label>
+            <input type="text" name="address" placeholder="Адрес производства...">
+        </label>
+        <button type="submit">Добавить новое произодство</button>
+    </form>
+    <form method="post" action="/home/addWorker">
+        <label>
+            <input type="text" name="firstName" placeholder="Имя...">
+        </label>
+        <label>
+            <input type="text" name="lastName" placeholder="Фамилия...">
+        </label>
+        <label>
+            <input type="text" name="middleName" placeholder="Отчество...">
+        </label>
+        <button type="submit">Добавить нового работника</button>
+    </form>
+    <form method="get" action="/home/show">
+        <input type="submit" value="Показать">
+    </form>
+    <h2></h2>
+    <table width="100%"><tr><td width="100%"><iframe src="/home/show"></iframe></td></tr></table>
+</div>
+
+</body>
+</html>
